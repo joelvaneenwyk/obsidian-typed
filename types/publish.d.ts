@@ -242,16 +242,19 @@ declare global {
     function ready(fn: () => any): void;
     function sleep(ms: number): Promise<void>;
     function nextFrame(): Promise<void>;
+
     /**
      * The actively focused Window object. This is usually the same as `window` but
      * it will be different when using popout windows.
      */
     let activeWindow: Window;
+
     /**
      * The actively focused Document object. This is usually the same as `document` but
      * it will be different when using popout windows.
      */
     let activeDocument: Document;
+
     interface Window extends EventTarget, AnimationFrameProvider, GlobalEventHandlers, WindowEventHandlers, WindowLocalStorage, WindowOrWorkerGlobalScope, WindowSessionStorage {
         /**
          * The actively focused Window object. This is usually the same as `window` but
@@ -263,6 +266,7 @@ declare global {
          * it will be different when using popout windows.
          */
         activeDocument: Document;
+        
         sleep(ms: number): Promise<void>;
         nextFrame(): Promise<void>;
     }
