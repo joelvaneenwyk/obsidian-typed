@@ -1,0 +1,23 @@
+{
+  "name": "obsidian-typed",
+  "version": "1.0.0",
+  "description": "About",
+  "main": " the Obsidian API.index.d.ts",
+  "types": "types/*.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelvaneenwyk/obsidian-typed.git"
+  },
+  "keywords": [
+    "obsidian"
+  ],
+  "author": "Joel Van Eenwyk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joelvaneenwyk/obsidian-typed/issues"
+  },
+  "homepage": "https://github.com/joelvaneenwyk/obsidian-typed#readme"
+}
