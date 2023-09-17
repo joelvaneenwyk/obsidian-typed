@@ -1,6 +1,6 @@
 # Obsidian Types
 
-This repository contains TypeScript typings for undocumented parts of the [Obsidian](https://obsidian.md/) API. You can add the code as a submodule to your project - or as an NPM package via `npm install --save-dev https://github.com/Fevol/obsidian-typings`.
+This repository contains TypeScript typings for undocumented parts of the [Obsidian](https://obsidian.md/) API. You can add the code as a submodule to your project or as an NPM package via `npm install --save-dev https://github.com/joelvaneenwyk/obsidian-typed`.
 
 These typings contain many of the undocumented API methods and variables, excluding those that
 seem to be intended solely for internal use and will not be relevant for plugin development.
@@ -18,6 +18,6 @@ All the types had to be deduced from either context, manually running the functi
 You will have to verify if the code behaves as expected, both with regard to the expected types, as well as what
 the function description says.
 
-With all the disclaimers out of the way, hopefully these typings will help in removing 90% of the `@ts-ignore` statements in your codebase, or perhaps even let you discover solutions that didn't seem possible before.
+With all the disclaimers out of the way, hopefully these typings will help in removing `@ts-ignore` statements in your codebase or perhaps even let you discover solutions that didn't seem possible before.
 
 PR's and issue reports are welcome for missing, deprecated or incorrectly defined typings.
