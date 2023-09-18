@@ -1,0 +1,80 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "json-files",
+    "prettier",
+    "jest",
+    "unicorn",
+    "regexp"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:regexp/recommended"
+  ],
+  // Add an `overrides` section to add a parser configuration for svelte.
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ], // Your TypeScript files extension
+      // As mentioned in the comments, you should extend TypeScript plugins here,
+      // instead of extending them outside the `overrides`.
+      // If you don't want to extend any rules, you don't need an `extends` attribute.
+      "extends": [
+        // "plugin:@typescript-eslint/recommended-type-checked",
+        // "plugin:@typescript-eslint/strict-type-checked",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "parserOptions": {
+        "project": [
+          "./tsconfig.json"
+        ] // Specify it only for TypeScript files
+      }
+    },
+    {
+      "parserOptions": {
+        "extraFileExtensions": [
+          ".svelte"
+        ] // This is a required setting in `@typescript-eslint/parser` v4.24.0.
+      },
+      "files": [
+        "*.svelte"
+      ],
+      "extends": [
+        "plugin:svelte/recommended"
+      ],
+      "parser": "svelte-eslint-parser"
+    }
+  ],
+  "parserOptions": {},
+  "rules": {
+    "require-await": "warn",
+    "no-return-await": "warn",
+    "prettier/prettier": "error",
+    "no-await-in-loop": "warn",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "no-unused-vars": "off",
+    "prefer-const": "error",
+    "regex/no-unused-capturing-group": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "indent": "off",
+    "one-var": [
+      "error",
+      "never"
+    ],
+    "quotes": "off",
+    "jsx-quotes": "off",
+    "no-mixed-spaces-and-tabs": "off",
+    "no-extra-semi": "off",
+    "one-var-declaration-per-line": "off",
+    "no-prototype-builtins": "off"
+  }
+}

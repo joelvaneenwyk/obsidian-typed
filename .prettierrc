@@ -1,0 +1,60 @@
+{
+  "tabWidth": 4,
+  "printWidth": 120,
+  "useTabs": false,
+  "semi": true,
+  "endOfLine": "auto",
+  "singleQuote": true,
+  "trailingComma": "none",
+  "embeddedLanguageFormatting": "auto",
+  "no-multiple-empty-lines": [
+    "error",
+    {
+      "max": 1
+    }
+  ],
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    },
+    {
+      "files": [
+        "*.js",
+        "*.ts",
+        "*.mjs",
+        "*.tsx",
+        "*.svelte",
+        "*.mjs"
+      ],
+      "options": {
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    },
+    {
+      "files": [
+        "*.yml",
+        "*.yaml"
+      ],
+      "options": {
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    },
+    {
+      "files": [
+        "*.json",
+        ".prettierrc",
+        ".eslintrc"
+      ],
+      "options": {
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    }
+  ]
+}

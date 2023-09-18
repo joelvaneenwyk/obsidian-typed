@@ -1,0 +1,52 @@
+# EditorConfig is awesome: https://EditorConfig.org
+
+# top-most EditorConfig file
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Formatter options e.g., used by Prettier
+trailing_comma = none
+max_line_length = 120
+
+[*.{bat,cmd}]
+indent_size = 4
+indent_style = space
+line_ending = crlf
+insert_final_newline = true
+
+[*.{md,ps1}]
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+[*.json]
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+
+[*.{ts,svelte,js,mjs,cjs,tsx}]
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+
+[*.{cs,html,css}]
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+[*.{yaml,yml}]
+indent_size = 2
+insert_final_newline = false
+
+[{*.json,.babelrc,.eslintrc,.prettierrc,.stylelintrc}]
+indent_size = 2
+insert_final_newline = false
+
+[.prettierrc]
+indent_size = 2
