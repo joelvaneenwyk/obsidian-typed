@@ -1,4 +1,6 @@
-
+/**
+ * Obsidian Publish
+ */
 declare global {
     interface ObjectConstructor {
         isEmpty(object: Record<string, any>): boolean;
@@ -266,7 +268,7 @@ declare global {
          * it will be different when using popout windows.
          */
         activeDocument: Document;
-        
+
         sleep(ms: number): Promise<void>;
         nextFrame(): Promise<void>;
     }
