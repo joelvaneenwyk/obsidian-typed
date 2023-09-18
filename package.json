@@ -1,12 +1,23 @@
 {
+  "private": true,
   "name": "@types/obsidian",
   "version": "1.4.11",
   "description": "Type definitions for the latest Obsidian API (https://obsidian.md)",
   "main": "",
   "types": "types/*.d.ts",
   "homepage": "https://github.com/joelvaneenwyk/obsidian-typed#readme",
+  "type": "module",
+  "husky": {
+    "hooks": {
+      "_comment": "This will remove husky from when we started migrating to use prettier",
+      "pre-commit": "npm uninstall husky"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-all": "node --require source-map-support/register node_modules/@definitelytyped/dtslint-runner/ --path .",
+    "test": "node --require source-map-support/register node_modules/@definitelytyped/dtslint/ types",
+    "lint": "node --require source-map-support/register node_modules/@definitelytyped/dtslint/ types",
+    "prettier": "prettier"
   },
   "repository": {
     "type": "git",
@@ -20,12 +31,45 @@
   "bugs": {
     "url": "https://github.com/joelvaneenwyk/obsidian-typed/issues"
   },
+  "engines": {
+    "node": ">=7.8.0"
+  },
   "dependencies": {
-      "@types/codemirror": "5.60.8",
-      "moment": "2.29.4"
+    "@types/codemirror": "5.60.8",
+    "dtslint": "^3.4.2",
+    "moment": "2.29.4"
+  },
+  "devDependencies": {
+    "@definitelytyped/definitions-parser": "^0.0.178",
+    "@definitelytyped/dtslint": "latest",
+    "@definitelytyped/dtslint-runner": "^0.0.178",
+    "@definitelytyped/eslint-plugin": "^0.0.175",
+    "@definitelytyped/header-parser": "latest",
+    "@definitelytyped/utils": "latest",
+    "@octokit/core": "^3.5.1",
+    "@octokit/rest": "^16.0.0",
+    "comment-json": "^4.2.3",
+    "d3-array": "^3.0.2",
+    "d3-axis": "^3.0.0",
+    "d3-scale": "^4.0.0",
+    "d3-selection": "^3.0.0",
+    "d3-time": "^3.0.0",
+    "d3-time-format": "^4.0.0",
+    "danger": "^11.2.3",
+    "eslint-plugin-jsdoc": "^44.2.7",
+    "jsdom": "^17.0.0",
+    "prettier": "^2.8.8",
+    "remark-cli": "^11.0.0",
+    "remark-gfm": "^3.0.0",
+    "remark-validate-links": "^12.0.0",
+    "shelljs": "^0.8.5",
+    "source-map-support": "^0.5.21",
+    "typescript": "next",
+    "w3c-xmlserializer": "^2.0.0",
+    "yargs": "^17.1.1"
   },
   "peerDependencies": {
-      "@codemirror/state": "^6.0.0",
-      "@codemirror/view": "^6.0.0"
+    "@codemirror/state": "^6.0.0",
+    "@codemirror/view": "^6.0.0"
   }
 }
